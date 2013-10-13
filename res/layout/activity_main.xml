@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <AutoCompleteTextView
+        android:id="@+id/map_autocomplete_textview"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="7dip"
+        android:layout_marginRight="7dip"
+        android:layout_marginTop="7dip"
+        android:completionThreshold="1"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:drawablePadding="5dp"
+        android:hint="@string/suggestions_hint" />
+
+    <TextView
+        android:id="@+id/map_longitude_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/transparent"
+        android:text="longitude: 0.0" />
+
+    <TextView
+        android:id="@+id/map_latitude_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/map_longitude_text"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/transparent"
+        android:text="latitude: 0.0" />
+
+    <TextView
+        android:id="@+id/map_country_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/map_latitude_text"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/transparent"
+        android:text="contry: " />
+
+    <TextView
+        android:id="@+id/map_city_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/map_country_text"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/transparent"
+        android:text="city: " />
+
+    <TextView
+        android:id="@+id/map_address_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/map_city_text"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/transparent"
+        android:text="street: " />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/map_address_text"
+        android:layout_below="@id/map_autocomplete_textview" >
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/marker_pointer"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/indicator_code_lock_point_area_red" />
+    </RelativeLayout>
+
+</RelativeLayout>
