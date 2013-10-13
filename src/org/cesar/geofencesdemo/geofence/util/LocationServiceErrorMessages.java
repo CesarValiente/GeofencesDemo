@@ -1,5 +1,10 @@
 /*
- * Copyright (C) 2013 The Android Open Source Project
+ * Copyright (C) 2006 The Android Open Source Project
+ * 
+ * Modifications and additions by: Cesar Valiente 
+ * mail: cesar.valiente@gmail.com
+ * twitter: @CesarValiente
+ *
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +18,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.cesar.geofencesdemo.geofence.util;
 
 import org.cesar.geofencesdemo.R;
@@ -31,7 +35,7 @@ public class LocationServiceErrorMessages {
     private LocationServiceErrorMessages() {
     }
 
-    public static String getErrorString(Context context, int errorCode) {
+    public static String getErrorString(final Context context, final int errorCode) {
 
         // Get a handle to resources, to allow the method to retrieve messages.
         Resources mResources = context.getResources();
@@ -42,53 +46,53 @@ public class LocationServiceErrorMessages {
         // Decide which error message to get, based on the error code.
         switch (errorCode) {
 
-        case ConnectionResult.DEVELOPER_ERROR:
-            errorString = mResources.getString(R.string.connection_error_misconfigured);
-            break;
+            case ConnectionResult.DEVELOPER_ERROR:
+                errorString = mResources.getString(R.string.connection_error_misconfigured);
+                break;
 
-        case ConnectionResult.INTERNAL_ERROR:
-            errorString = mResources.getString(R.string.connection_error_internal);
-            break;
+            case ConnectionResult.INTERNAL_ERROR:
+                errorString = mResources.getString(R.string.connection_error_internal);
+                break;
 
-        case ConnectionResult.INVALID_ACCOUNT:
-            errorString = mResources.getString(R.string.connection_error_invalid_account);
-            break;
+            case ConnectionResult.INVALID_ACCOUNT:
+                errorString = mResources.getString(R.string.connection_error_invalid_account);
+                break;
 
-        case ConnectionResult.LICENSE_CHECK_FAILED:
-            errorString = mResources.getString(R.string.connection_error_license_check_failed);
-            break;
+            case ConnectionResult.LICENSE_CHECK_FAILED:
+                errorString = mResources.getString(R.string.connection_error_license_check_failed);
+                break;
 
-        case ConnectionResult.NETWORK_ERROR:
-            errorString = mResources.getString(R.string.connection_error_network);
-            break;
+            case ConnectionResult.NETWORK_ERROR:
+                errorString = mResources.getString(R.string.connection_error_network);
+                break;
 
-        case ConnectionResult.RESOLUTION_REQUIRED:
-            errorString = mResources.getString(R.string.connection_error_needs_resolution);
-            break;
+            case ConnectionResult.RESOLUTION_REQUIRED:
+                errorString = mResources.getString(R.string.connection_error_needs_resolution);
+                break;
 
-        case ConnectionResult.SERVICE_DISABLED:
-            errorString = mResources.getString(R.string.connection_error_disabled);
-            break;
+            case ConnectionResult.SERVICE_DISABLED:
+                errorString = mResources.getString(R.string.connection_error_disabled);
+                break;
 
-        case ConnectionResult.SERVICE_INVALID:
-            errorString = mResources.getString(R.string.connection_error_invalid);
-            break;
+            case ConnectionResult.SERVICE_INVALID:
+                errorString = mResources.getString(R.string.connection_error_invalid);
+                break;
 
-        case ConnectionResult.SERVICE_MISSING:
-            errorString = mResources.getString(R.string.connection_error_missing);
-            break;
+            case ConnectionResult.SERVICE_MISSING:
+                errorString = mResources.getString(R.string.connection_error_missing);
+                break;
 
-        case ConnectionResult.SERVICE_VERSION_UPDATE_REQUIRED:
-            errorString = mResources.getString(R.string.connection_error_outdated);
-            break;
+            case ConnectionResult.SERVICE_VERSION_UPDATE_REQUIRED:
+                errorString = mResources.getString(R.string.connection_error_outdated);
+                break;
 
-        case ConnectionResult.SIGN_IN_REQUIRED:
-            errorString = mResources.getString(R.string.connection_error_sign_in_required);
-            break;
+            case ConnectionResult.SIGN_IN_REQUIRED:
+                errorString = mResources.getString(R.string.connection_error_sign_in_required);
+                break;
 
-        default:
-            errorString = mResources.getString(R.string.connection_error_unknown);
-            break;
+            default:
+                errorString = mResources.getString(R.string.connection_error_unknown);
+                break;
         }
 
         // Return the error message
