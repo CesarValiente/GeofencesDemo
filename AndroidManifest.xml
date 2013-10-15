@@ -52,6 +52,8 @@
      Google Maps Android API v2, but are recommended.
     -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Google Play Services Geofences -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application

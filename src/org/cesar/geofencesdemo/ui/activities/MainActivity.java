@@ -58,7 +58,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -130,8 +129,6 @@ public class MainActivity extends ActionBarActivity implements OnCameraChangeLis
     @Override
     public void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 
         setContentView(R.layout.activity_main);
 
@@ -220,7 +217,6 @@ public class MainActivity extends ActionBarActivity implements OnCameraChangeLis
         }
         mAutocompleteAdapter.addAll(suggestions);
         mAutocompleteAdapter.notifyDataSetChanged();
-        setProgressBarIndeterminateVisibility(false);
     }
 
     @Override
